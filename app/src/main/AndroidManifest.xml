@@ -44,30 +44,57 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".Activity_Main"
             android:label="@string/app_title" />
-        <activity android:name=".Activity_1DBarcodes" />
         <activity
+            android:exported="true"
+            android:name=".Activity_1DBarcodes" />
+        <activity
+            android:exported="true"
             android:name=".Activity_DeviceList"
             android:theme="@android:style/Theme.Dialog" />
         <activity
+            android:exported="true"
             android:name=".Activity_Print_Image"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".Activity_PRNFile" />
-        <activity android:name=".Activity_Image_File" />
-        <activity android:name=".Activity_QRCode" />
-        <activity android:name=".Activity_Setting" />
-        <activity android:name=".Activity_TextFormat" />
         <activity
+            android:exported="true"
+            android:name=".Activity_PRNFile" />
+        <activity
+            android:exported="true"
+            android:name=".Activity_Image_File" />
+        <activity
+            android:exported="true"
+            android:name=".Activity_QRCode" />
+        <activity
+            android:exported="true"
+            android:name=".Activity_Setting" />
+        <activity
+            android:exported="true"
+            android:name=".Activity_TextFormat" />
+        <activity
+            android:exported="true"
             android:name=".Activity_Wifi"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".Activity_Image_Download" />
-        <activity android:name=".Activity_Image_Print" />
         <activity
+            android:exported="true"
+            android:name=".Activity_Image_Download" />
+        <activity
+            android:exported="true"
+            android:name=".Activity_Image_Print" />
+        <activity
+            android:exported="true"
             android:name=".Activity_Status"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".Activity_TextBackground" />
-        <activity android:name=".AutoTextActivity"></activity>
-        <activity android:name=".BTActivity"></activity>
+        <activity
+            android:exported="true"
+            android:name=".Activity_TextBackground" />
+        <activity
+            android:exported="true"
+            android:name=".AutoTextActivity"></activity>
+        <activity
+            android:exported="true"
+            android:name=".BTActivity"></activity>
     </application>
 </manifest>

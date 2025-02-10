@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
-INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
-INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
-INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-100:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-100:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-100:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-100:12
 MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9050546b5da709ea87416ee6badbb6f6\transformed\jetified-viewbinding-8.8.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:2:1-72:12
 MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\aae35f8e644fe00ec90d4271d1cae98a\transformed\jetified-ucrop-v2.6.0\AndroidManifest.xml:2:1-11:12
@@ -129,8 +129,8 @@ ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\m
 	android:name
 		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:27:22-72
 application
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-72:19
-INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-72:19
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-99:19
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-99:19
 MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:24:5-70:19
 MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:24:5-70:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
@@ -178,79 +178,111 @@ ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\m
 	android:name
 		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:43:27-74
 activity#com.sdk.cpcl.Activity_Main
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:46:9-48:49
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:46:9-49:49
 	android:label
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:48:13-46
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:49:13-46
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:47:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:47:13-42
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:48:13-42
 activity#com.sdk.cpcl.Activity_1DBarcodes
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:49:9-57
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:50:9-52:51
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:49:19-54
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:52:13-48
 activity#com.sdk.cpcl.Activity_DeviceList
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:50:9-52:59
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:53:9-56:59
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:54:13-36
 	android:theme
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:52:13-56
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:56:13-56
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:51:13-48
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:55:13-48
 activity#com.sdk.cpcl.Activity_Print_Image
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:53:9-55:59
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:57:9-60:59
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:58:13-36
 	android:theme
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:55:13-56
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:54:13-49
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:59:13-49
 activity#com.sdk.cpcl.Activity_PRNFile
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:56:9-54
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:61:9-63:48
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:62:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:56:19-51
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:63:13-45
 activity#com.sdk.cpcl.Activity_Image_File
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:57:9-57
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:64:9-66:51
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:65:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:57:19-54
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:66:13-48
 activity#com.sdk.cpcl.Activity_QRCode
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:58:9-53
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:67:9-69:47
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:68:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:58:19-50
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:69:13-44
 activity#com.sdk.cpcl.Activity_Setting
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:59:9-54
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:70:9-72:48
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:71:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:59:19-51
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:72:13-45
 activity#com.sdk.cpcl.Activity_TextFormat
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:60:9-57
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:73:9-75:51
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:74:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:60:19-54
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:75:13-48
 activity#com.sdk.cpcl.Activity_Wifi
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:61:9-63:59
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:76:9-79:59
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:77:13-36
 	android:theme
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:63:13-56
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:79:13-56
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:62:13-42
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:78:13-42
 activity#com.sdk.cpcl.Activity_Image_Download
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:64:9-61
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:80:9-82:55
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:81:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:64:19-58
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:82:13-52
 activity#com.sdk.cpcl.Activity_Image_Print
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:65:9-58
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:83:9-85:52
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:84:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:65:19-55
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:85:13-49
 activity#com.sdk.cpcl.Activity_Status
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:66:9-68:59
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:86:9-89:59
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:87:13-36
 	android:theme
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:68:13-56
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:89:13-56
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:67:13-44
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:88:13-44
 activity#com.sdk.cpcl.Activity_TextBackground
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:69:9-61
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:90:9-92:55
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:91:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:69:19-58
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:92:13-52
 activity#com.sdk.cpcl.AutoTextActivity
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:70:9-63
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:93:9-95:57
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:94:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:70:19-51
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:95:13-45
 activity#com.sdk.cpcl.BTActivity
-ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:71:9-57
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:96:9-98:51
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:97:13-36
 	android:name
-		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:71:19-45
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:98:13-39
 uses-sdk
 INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml

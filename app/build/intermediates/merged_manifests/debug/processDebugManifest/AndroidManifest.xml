@@ -65,30 +65,57 @@
         </activity>
         <activity
             android:name="com.sdk.cpcl.Activity_Main"
+            android:exported="true"
             android:label="@string/app_title" />
-        <activity android:name="com.sdk.cpcl.Activity_1DBarcodes" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_1DBarcodes"
+            android:exported="true" />
         <activity
             android:name="com.sdk.cpcl.Activity_DeviceList"
+            android:exported="true"
             android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.sdk.cpcl.Activity_Print_Image"
+            android:exported="true"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="com.sdk.cpcl.Activity_PRNFile" />
-        <activity android:name="com.sdk.cpcl.Activity_Image_File" />
-        <activity android:name="com.sdk.cpcl.Activity_QRCode" />
-        <activity android:name="com.sdk.cpcl.Activity_Setting" />
-        <activity android:name="com.sdk.cpcl.Activity_TextFormat" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_PRNFile"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_Image_File"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_QRCode"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_Setting"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_TextFormat"
+            android:exported="true" />
         <activity
             android:name="com.sdk.cpcl.Activity_Wifi"
+            android:exported="true"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="com.sdk.cpcl.Activity_Image_Download" />
-        <activity android:name="com.sdk.cpcl.Activity_Image_Print" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_Image_Download"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_Image_Print"
+            android:exported="true" />
         <activity
             android:name="com.sdk.cpcl.Activity_Status"
+            android:exported="true"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="com.sdk.cpcl.Activity_TextBackground" />
-        <activity android:name="com.sdk.cpcl.AutoTextActivity" />
-        <activity android:name="com.sdk.cpcl.BTActivity" />
+        <activity
+            android:name="com.sdk.cpcl.Activity_TextBackground"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.AutoTextActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.sdk.cpcl.BTActivity"
+            android:exported="true" />
 
         <provider
             android:name="com.luck.picture.lib.PictureFileProvider"

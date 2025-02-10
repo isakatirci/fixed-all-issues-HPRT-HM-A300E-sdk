@@ -1,71 +1,47 @@
 [
     {
-        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_1dbarcodes.xml",
-        "source": "com.sdk.cpcl.app-main-17:/layout/activity_1dbarcodes.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_cashdrawer.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_cashdrawer.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_prn_file.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_prn_file.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_cut.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_cut.xml"
+    },
+    {
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_1dbarcodes.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_1dbarcodes.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_image_print.xml",
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_image_print.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_auto_text.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_auto_text.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/item_printlist.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/item_printlist.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_status.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_status.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_1dbarcodes.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_1dbarcodes.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_cashdrawer.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_cashdrawer.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/item_print.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/item_print.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_print_image.xml",
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_print_image.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_qrcode.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_qrcode.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_logo.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_logo.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_setting.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_setting.xml"
-    },
-    {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_status.xml",
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_status.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_pdf417.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_pdf417.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_prn_file.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_prn_file.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_cut.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_cut.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_bt.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_bt.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_print_image.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_print_image.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_text_format.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_text_format.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_auto_text.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_auto_text.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity__text_background.xml",
@@ -76,8 +52,12 @@
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\file_item_bar.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\file_item_bar.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_image_download.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_image_download.xml"
+    },
+    {
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_devicelist.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_devicelist.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_text_format.xml",
@@ -92,56 +72,28 @@
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_pdf417.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_image_manage.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_image_manage.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_logo.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_logo.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_wifi.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_wifi.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_image_download.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_image_download.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_devicelist.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_devicelist.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_setting.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_setting.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_page_mode.xml",
         "source": "com.sdk.cpcl.app-main-17:/layout/activity_page_mode.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity__text_background.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity__text_background.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_align.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_align.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\item_printlist.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\item_printlist.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_image_manage.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/activity_image_manage.xml"
     },
     {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_esc_function.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_esc_function.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_bt.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_bt.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_align.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_align.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_image_print.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_image_print.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\item_print.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\item_print.xml"
-    },
-    {
-        "merged": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-mergeDebugResources-14:\\layout\\activity_page_mode.xml",
-        "source": "C:\\Users\\isa\\.gradle\\daemon\\8.10.2\\com.sdk.cpcl.app-main-17:\\layout\\activity_page_mode.xml"
+        "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/file_item_bar.xml",
+        "source": "com.sdk.cpcl.app-main-17:/layout/file_item_bar.xml"
     },
     {
         "merged": "com.sdk.cpcl.app-mergeDebugResources-14:/layout/activity_wifi.xml",

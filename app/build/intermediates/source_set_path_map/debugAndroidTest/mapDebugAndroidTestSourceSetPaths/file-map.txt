@@ -1,4 +1,5 @@
-com.sdk.cpcl.test.app-androidTest-0 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\generated\res\resValues\androidTest\debug
-com.sdk.cpcl.test.app-mergeDebugAndroidTestResources-1 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.sdk.cpcl.test.app-mergeDebugAndroidTestResources-2 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.sdk.cpcl.test.app-debugAndroidTest-3 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.sdk.cpcl.test.app-jetified-core-1.5.0-0 C:\Users\isa\.gradle\caches\8.10.2\transforms\a869e11c6cf5fb5af87fd098d72d4b00\transformed\jetified-core-1.5.0\res
+com.sdk.cpcl.test.app-androidTest-1 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\generated\res\resValues\androidTest\debug
+com.sdk.cpcl.test.app-mergeDebugAndroidTestResources-2 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.sdk.cpcl.test.app-mergeDebugAndroidTestResources-3 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.sdk.cpcl.test.app-debugAndroidTest-4 C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
