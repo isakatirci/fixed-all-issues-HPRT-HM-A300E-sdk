@@ -1,0 +1,437 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:1-73:12
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9050546b5da709ea87416ee6badbb6f6\transformed\jetified-viewbinding-8.8.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:2:1-72:12
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\aae35f8e644fe00ec90d4271d1cae98a\transformed\jetified-ucrop-v2.6.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-view:1.0.0-alpha19] C:\Users\isa\.gradle\caches\8.10.2\transforms\b6e8d8b7aef4dbfa047043f88e627b10\transformed\jetified-camera-view-1.0.0-alpha19\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b555b8dc1d7172017ae8fbe73c9db572\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\1604db67b9dd752ff804202d93c676df\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\49b4b6c6db69188436dae6b5907787fb\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5e0481d582409503394770817e18f855\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50] C:\Users\isa\.gradle\caches\8.10.2\transforms\34a5319ae2c5c821d6f42dec73ae9ca3\transformed\jetified-BaseRecyclerViewAdapterHelper-2.9.50\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\822a3c7d41eda42510055d04fe9594a8\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e3b7b3a0f211c2110db6da8e402d6358\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\c99d38ba16b7cc7a1bc9d005a74a3d57\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5dbae72f227002dd327175f346d478b2\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f507625ace55b3c500038801c2f6c679\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\7db384859ba990d00a7c3857e1012454\transformed\jetified-camera-lifecycle-1.0.0-beta12\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b8c036dc43a5ce6e88db2697f89c342d\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\390dba77d2849f0f45f5cc9d300ecb40\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\444b3d43f48937f7da90f1f9cf3b3829\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6911505f1f75ea73cac4de9688ccf5d8\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\23a46ebd24dfadb5a573abf3f21d2c15\transformed\transition-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-core:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\337bcd2895b91fe19de7d58968430d13\transformed\jetified-camera-core-1.0.0-beta12\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\d7b59c6e24b80d7f9f97c0a9fefadc36\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\17205897a26aa6b7871345a6b10ebb0b\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0517ccbaa25f71adaef9d58e2081ac13\transformed\jetified-gifdecoder-4.9.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\9e19d92cdaa2746f6ed84347e25d2a99\transformed\exifinterface-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\00258df79a363043677e6eecc73c0c21\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0721919cc0fda244045687252aaaca2a\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0aadf284eed1924f4d3484513787c068\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b03234f067b7238b90b34b3d6ff37dd3\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6e72997daaa8869431b2a2fc306bd2dd\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e469c1a2c49859b644a4668c19da0d3c\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f8b02af4e9aefb4c8b374fe3ff7eda4d\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\026f10eb75f820a805d2b545ebfd4ef8\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0-alpha01] C:\Users\isa\.gradle\caches\8.10.2\transforms\ecbb2a5a5cf659b0b0d1670d8b2feabe\transformed\jetified-annotation-experimental-1.1.0-alpha01\AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:3:5-79
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:3:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:4:5-81
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:4:22-78
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:5:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:6:5-74
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:6:22-71
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:8:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:10:22-73
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:12:22-65
+uses-feature#android.hardware.usb.host
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:14:5-62
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:14:19-59
+meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:16:16-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:18:5-81
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:18:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:19:5-80
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:19:22-77
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:20:5-77
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:20:22-74
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:21:5-22:47
+	tools:ignore
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:22:9-44
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:21:22-81
+uses-feature#android.hardware.camera
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:24:5-60
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:24:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:25:5-70
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:25:19-67
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:27:5-75
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:27:22-72
+application
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-72:19
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:28:5-72:19
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:24:5-70:19
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:24:5-70:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
+MERGED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0517ccbaa25f71adaef9d58e2081ac13\transformed\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0517ccbaa25f71adaef9d58e2081ac13\transformed\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0721919cc0fda244045687252aaaca2a\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0721919cc0fda244045687252aaaca2a\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+	android:requestLegacyExternalStorage
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:34:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:33:9-35
+	android:label
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:31:9-41
+	android:roundIcon
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:32:9-54
+	android:icon
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:30:9-39
+	android:allowBackup
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:29:9-35
+	android:theme
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:35:9-40
+activity#com.sdk.cpcl.Activity_Logo
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:36:9-45:20
+	android:label
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:39:13-45
+	android:exported
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:38:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:40:13-44:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:43:17-77
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:43:27-74
+activity#com.sdk.cpcl.Activity_Main
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:46:9-48:49
+	android:label
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:48:13-46
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:47:13-42
+activity#com.sdk.cpcl.Activity_1DBarcodes
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:49:9-57
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:49:19-54
+activity#com.sdk.cpcl.Activity_DeviceList
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:50:9-52:59
+	android:theme
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:52:13-56
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:51:13-48
+activity#com.sdk.cpcl.Activity_Print_Image
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:53:9-55:59
+	android:theme
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:55:13-56
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:54:13-49
+activity#com.sdk.cpcl.Activity_PRNFile
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:56:9-54
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:56:19-51
+activity#com.sdk.cpcl.Activity_Image_File
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:57:9-57
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:57:19-54
+activity#com.sdk.cpcl.Activity_QRCode
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:58:9-53
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:58:19-50
+activity#com.sdk.cpcl.Activity_Setting
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:59:9-54
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:59:19-51
+activity#com.sdk.cpcl.Activity_TextFormat
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:60:9-57
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:60:19-54
+activity#com.sdk.cpcl.Activity_Wifi
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:61:9-63:59
+	android:theme
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:63:13-56
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:62:13-42
+activity#com.sdk.cpcl.Activity_Image_Download
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:64:9-61
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:64:19-58
+activity#com.sdk.cpcl.Activity_Image_Print
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:65:9-58
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:65:19-55
+activity#com.sdk.cpcl.Activity_Status
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:66:9-68:59
+	android:theme
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:68:13-56
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:67:13-44
+activity#com.sdk.cpcl.Activity_TextBackground
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:69:9-61
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:69:19-58
+activity#com.sdk.cpcl.AutoTextActivity
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:70:9-63
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:70:19-51
+activity#com.sdk.cpcl.BTActivity
+ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:71:9-57
+	android:name
+		ADDED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:71:19-45
+uses-sdk
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9050546b5da709ea87416ee6badbb6f6\transformed\jetified-viewbinding-8.8.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9050546b5da709ea87416ee6badbb6f6\transformed\jetified-viewbinding-8.8.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:8:5-11:173
+MERGED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:8:5-11:173
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\aae35f8e644fe00ec90d4271d1cae98a\transformed\jetified-ucrop-v2.6.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.LuckSiege.PictureSelector:ucrop:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\aae35f8e644fe00ec90d4271d1cae98a\transformed\jetified-ucrop-v2.6.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.camera:camera-view:1.0.0-alpha19] C:\Users\isa\.gradle\caches\8.10.2\transforms\b6e8d8b7aef4dbfa047043f88e627b10\transformed\jetified-camera-view-1.0.0-alpha19\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-view:1.0.0-alpha19] C:\Users\isa\.gradle\caches\8.10.2\transforms\b6e8d8b7aef4dbfa047043f88e627b10\transformed\jetified-camera-view-1.0.0-alpha19\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b555b8dc1d7172017ae8fbe73c9db572\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b555b8dc1d7172017ae8fbe73c9db572\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\1604db67b9dd752ff804202d93c676df\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\1604db67b9dd752ff804202d93c676df\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\49b4b6c6db69188436dae6b5907787fb\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\49b4b6c6db69188436dae6b5907787fb\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.print:print:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5e0481d582409503394770817e18f855\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5e0481d582409503394770817e18f855\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\9c051fa9c744e7625c780c4f8e63f09f\transformed\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50] C:\Users\isa\.gradle\caches\8.10.2\transforms\34a5319ae2c5c821d6f42dec73ae9ca3\transformed\jetified-BaseRecyclerViewAdapterHelper-2.9.50\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50] C:\Users\isa\.gradle\caches\8.10.2\transforms\34a5319ae2c5c821d6f42dec73ae9ca3\transformed\jetified-BaseRecyclerViewAdapterHelper-2.9.50\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\822a3c7d41eda42510055d04fe9594a8\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\822a3c7d41eda42510055d04fe9594a8\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e3b7b3a0f211c2110db6da8e402d6358\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e3b7b3a0f211c2110db6da8e402d6358\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\c99d38ba16b7cc7a1bc9d005a74a3d57\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\c99d38ba16b7cc7a1bc9d005a74a3d57\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5dbae72f227002dd327175f346d478b2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5dbae72f227002dd327175f346d478b2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f507625ace55b3c500038801c2f6c679\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f507625ace55b3c500038801c2f6c679\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\7db384859ba990d00a7c3857e1012454\transformed\jetified-camera-lifecycle-1.0.0-beta12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-lifecycle:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\7db384859ba990d00a7c3857e1012454\transformed\jetified-camera-lifecycle-1.0.0-beta12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b8c036dc43a5ce6e88db2697f89c342d\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b8c036dc43a5ce6e88db2697f89c342d\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\390dba77d2849f0f45f5cc9d300ecb40\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\390dba77d2849f0f45f5cc9d300ecb40\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\444b3d43f48937f7da90f1f9cf3b3829\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\444b3d43f48937f7da90f1f9cf3b3829\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6911505f1f75ea73cac4de9688ccf5d8\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6911505f1f75ea73cac4de9688ccf5d8\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\23a46ebd24dfadb5a573abf3f21d2c15\transformed\transition-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\23a46ebd24dfadb5a573abf3f21d2c15\transformed\transition-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-core:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\337bcd2895b91fe19de7d58968430d13\transformed\jetified-camera-core-1.0.0-beta12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-core:1.0.0-beta12] C:\Users\isa\.gradle\caches\8.10.2\transforms\337bcd2895b91fe19de7d58968430d13\transformed\jetified-camera-core-1.0.0-beta12\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\a53cdd73311309d633caf4f6724da4b8\transformed\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\d7b59c6e24b80d7f9f97c0a9fefadc36\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\d7b59c6e24b80d7f9f97c0a9fefadc36\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\17205897a26aa6b7871345a6b10ebb0b\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\17205897a26aa6b7871345a6b10ebb0b\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0517ccbaa25f71adaef9d58e2081ac13\transformed\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0517ccbaa25f71adaef9d58e2081ac13\transformed\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\9e19d92cdaa2746f6ed84347e25d2a99\transformed\exifinterface-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.1] C:\Users\isa\.gradle\caches\8.10.2\transforms\9e19d92cdaa2746f6ed84347e25d2a99\transformed\exifinterface-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\00258df79a363043677e6eecc73c0c21\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\00258df79a363043677e6eecc73c0c21\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0721919cc0fda244045687252aaaca2a\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0721919cc0fda244045687252aaaca2a\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0aadf284eed1924f4d3484513787c068\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\0aadf284eed1924f4d3484513787c068\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b03234f067b7238b90b34b3d6ff37dd3\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\b03234f067b7238b90b34b3d6ff37dd3\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6e72997daaa8869431b2a2fc306bd2dd\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\6e72997daaa8869431b2a2fc306bd2dd\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e469c1a2c49859b644a4668c19da0d3c\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\e469c1a2c49859b644a4668c19da0d3c\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f8b02af4e9aefb4c8b374fe3ff7eda4d\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\f8b02af4e9aefb4c8b374fe3ff7eda4d\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\026f10eb75f820a805d2b545ebfd4ef8\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\026f10eb75f820a805d2b545ebfd4ef8\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0-alpha01] C:\Users\isa\.gradle\caches\8.10.2\transforms\ecbb2a5a5cf659b0b0d1670d8b2feabe\transformed\jetified-annotation-experimental-1.1.0-alpha01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0-alpha01] C:\Users\isa\.gradle\caches\8.10.2\transforms\ecbb2a5a5cf659b0b0d1670d8b2feabe\transformed\jetified-annotation-experimental-1.1.0-alpha01\AndroidManifest.xml:20:5-22:41
+	tools:overrideLibrary
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:11:9-170
+	android:targetSdkVersion
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml
+queries
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:14:5-21:15
+	package
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:14:14-40
+intent#action:name:android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:15:9-17:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:16:13-73
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:16:21-70
+intent#action:name:android.media.action.ACTION_VIDEO_CAPTURE
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:18:9-20:18
+action#android.media.action.ACTION_VIDEO_CAPTURE
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:19:13-80
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:19:21-77
+provider#com.luck.picture.lib.PictureFileProvider
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:25:9-33:20
+	android:grantUriPermissions
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:29:13-47
+	android:authorities
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:27:13-60
+	android:exported
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:26:13-68
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:30:13-32:54
+	android:resource
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:32:17-51
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:31:17-67
+activity#com.luck.picture.lib.PictureSelectorActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:35:9-37:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:37:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:36:13-72
+activity#com.luck.picture.lib.PictureSelectorWeChatStyleActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:38:9-40:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:40:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:39:13-83
+activity#com.luck.picture.lib.PictureSelectorCameraEmptyActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:41:9-44:64
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:43:13-74
+	android:theme
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:44:13-61
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:42:13-83
+activity#com.luck.picture.lib.PictureCustomCameraActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:45:9-47:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:47:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:46:13-76
+activity#com.luck.picture.lib.PicturePreviewActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:48:9-50:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:50:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:49:13-71
+activity#com.luck.picture.lib.PictureSelectorPreviewWeChatStyleActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:51:9-53:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:53:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:52:13-90
+activity#com.luck.picture.lib.PictureVideoPlayActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:54:9-57:50
+	android:screenOrientation
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:57:13-47
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:56:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:55:13-73
+activity#com.luck.picture.lib.PictureExternalPreviewActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:58:9-60:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:60:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:59:13-79
+activity#com.luck.picture.lib.PicturePlayAudioActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:61:9-63:77
+	android:configChanges
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:63:13-74
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:62:13-73
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:64:9-66:61
+	android:theme
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:66:13-58
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:65:13-60
+activity#com.yalantis.ucrop.PictureMultiCuttingActivity
+ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:67:9-69:61
+	android:theme
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:69:13-58
+	android:name
+		ADDED from [com.github.LuckSiege.PictureSelector:picture_library:v2.6.0] C:\Users\isa\.gradle\caches\8.10.2\transforms\5b6dae635077caf21fd4d97f6a09cfdd\transformed\jetified-picture_library-v2.6.0\AndroidManifest.xml:68:13-74

@@ -1,0 +1,1984 @@
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:18: Warning: WRITE_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to write to shared storage, use the MediaStore.createWriteRequest intent. [ScopedStorage]
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:19: Warning: READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO or READ_MEDIA_AUDIO. [ScopedStorage]
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:48: Warning: Array activity_main_sample_2inch_receipt has an inconsistent number of items (22 in values/strings.xml, 17 in values-zh-rCN/strings.xml) [InconsistentArrays]
+    <string-array name="activity_main_sample_2inch_receipt">
+    ^
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:53: Declaration with array size (17)
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:72: Warning: Array activity_main_sample_3inch_receipt has an inconsistent number of items (22 in values/strings.xml, 21 in values-zh-rCN/strings.xml) [InconsistentArrays]
+    <string-array name="activity_main_sample_3inch_receipt">
+    ^
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:76: Declaration with array size (21)
+
+   Explanation for issues of type "InconsistentArrays":
+   When an array is translated in a different locale, it should normally have
+   the same number of elements as the original array. When adding or removing
+   elements to an array, it is easy to forget to update all the locales, and
+   this lint warning finds inconsistencies like these.
+
+   Note however that there may be cases where you really want to declare a
+   different number of array items in each configuration (for example where
+   the array represents available options, and those options differ for
+   different layout orientations and so on), so use your own judgment to
+   decide if this is really an error.
+
+   You can suppress this error type if it finds false errors in your project.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:40: Warning: Attribute android:digits should not be used with <TextView>: Change element type to <EditText> ? [TextViewEdits]
+         android:digits="0123456789."
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "TextViewEdits":
+   Using a <TextView> to input text is generally an error, you should be using
+   <EditText> instead.  EditText is a subclass of TextView, and some of the
+   editing support is provided by TextView, so it's possible to set some
+   input-related properties on a TextView. However, using a TextView along
+   with input attributes is usually a cut & paste error. To input text you
+   should be using <EditText>.
+
+   This check also checks subclasses of TextView, such as Button and CheckBox,
+   since these have the same issue: they should not be used with editable
+   attributes.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Image_File.java:160: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+    if(strType0.contains(strFilePrefix.toLowerCase()+","))
+                                       ~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Image_File.java:164: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+    else if(strType1.contains(strFilePrefix.toLowerCase()+","))
+                                            ~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_PRNFile.java:185: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+    if(strType0.contains(strFilePrefix.toLowerCase()+","))
+                                       ~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_PRNFile.java:189: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+    else if(strType1.contains(strFilePrefix.toLowerCase()+","))
+                                            ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_1DBarcodes.java:226: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+   PrinterHelper.printAreaSize("0", "200","200","500","1");
+ ~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_1DBarcodes.java:221: Previous line indentation here
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:264: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+     switch(resultCode){
+~~~~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:262: Previous line indentation here
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:493: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+            if (intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false)){
+   ~~~~~~~~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:492: Previous line indentation here
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:509: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+    if (UsbManager.ACTION_USB_DEVICE_DETACHED.equals(action)){
+  ~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:490: Previous line indentation here
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:868: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+   PrinterHelper.printText(path);
+~~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:864: Previous line indentation here
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1093: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+   PrinterHelper.RowSetX("200");//设置X坐标
+~~~
+    C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1092: Previous line indentation here
+
+   Explanation for issues of type "SuspiciousIndentation":
+   This check looks for cases where the indentation suggests a grouping that
+   isn't actually there in the code. A common example of this would be
+   something like
+   if (column > width)
+       line++
+       column = 0
+   Here, the column = 0 line will be executed every single time, not just if
+   the condition is true.
+
+   Available options:
+
+   **always-run** (default is false):
+   Whether this check should be included while editing.
+
+   While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an `if` statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="SuspiciousIndentation">
+           <option name="always-run" value="false" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:39: Warning: Redundant label can be removed [RedundantLabel]
+            android:label="@string/app_name">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantLabel":
+   When an activity does not have a label attribute, it will use the one from
+   the application tag. Since the application has already specified the same
+   label, the label on this activity can be omitted.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:4: Warning: A newer version of compileSdkVersion than 30 is available: 34 [GradleDependency]
+    compileSdkVersion 30
+    ~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:51: Warning: A newer version of androidx.appcompat:appcompat than 1.2.0 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:52: Warning: A newer version of androidx.swiperefreshlayout:swiperefreshlayout than 1.0.0 is available: 1.1.0 [GradleDependency]
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:53: Warning: A newer version of androidx.recyclerview:recyclerview than 1.1.0 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:56: Warning: A newer version of androidx.test.ext:junit than 1.1.2 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\build.gradle:57: Warning: A newer version of androidx.test.espresso:espresso-core than 3.3.0 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:39: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />     
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:50: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+      android:textSize="20.0dip"/>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:65: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:78: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:108: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:122: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:127: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:133: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:138: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:143: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:148: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:153: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:158: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:39: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="20.0dip" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:71: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="20.0dip" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:102: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="20.0dip" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:107: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="20.0dip"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:126: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                        android:textSize="20.0dip"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:139: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                        android:textSize="20.0dip"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_align.xml:12: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_align.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_align.xml:33: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_align.xml:41: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:36: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip" />
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:41: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:46: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:76: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip" />
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:105: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip" />
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:110: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                    android:textSize="20.0dip"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:126: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                            android:textSize="20.0dip"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:144: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                            android:textSize="20.0dip"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:24: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip" />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:29: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip" 
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:54: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:61: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:68: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />              
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_manage.xml:16: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip" />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_manage.xml:21: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip" />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_manage.xml:57: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_manage.xml:64: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:23: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip" />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:32: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+   android:textSize="20.0dip"/>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:95: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="16.0dip" />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:48: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:70: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:92: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:114: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:136: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:158: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />                
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:180: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20.0dip" />     
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:186: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+      android:textSize="20.0dip"/>            
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:32: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:46: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:64: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:90: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:95: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:107: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:112: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:120: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:133: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+               android:textSize="20.0dip"
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:141: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+               android:textSize="20.0dip"
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:152: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:157: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:175: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:188: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+               android:textSize="20.0dip"
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:196: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+               android:textSize="20.0dip"
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:54: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:85: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:90: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:96: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:101: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:118: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:123: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:32: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:45: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:51: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:58: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:64: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip" />
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:70: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:76: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip" />
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:82: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:88: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip" />
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_status.xml:12: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:41: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip" />
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:46: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:53: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:82: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:87: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:92: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+           android:textSize="20.0dip" /> 
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:97: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+     android:textSize="20.0dip"/>
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:116: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:136: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:163: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:183: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:20: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip"/>     
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:41: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+         android:textSize="20.0dip"/>     
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:80: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="20.0dip" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\file_item_bar.xml:20: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+  android:textSize="30dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SpUsage":
+   When setting text sizes, you should normally use sp, or "scale-independent
+   pixels". This is like the dp unit, but it is also scaled by the user's font
+   size preference. It is recommend you use this unit when specifying font
+   sizes, so they will be adjusted for both the screen density and the user's
+   preference.
+
+   There are cases where you might need to use dp; typically this happens when
+   the text is in a container with a specific dp-size. This will prevent the
+   text from spilling outside the container. Note however that this means that
+   the user's font size settings are not respected, so consider adjusting the
+   layout itself to be more flexible.
+
+   https://developer.android.com/training/multiscreen/screendensities.html
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\BTActivity.java:142: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        baseQuickAdapter.notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\BTActivity.java:154: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+                baseQuickAdapter.notifyDataSetChanged();
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-v11: Warning: This folder configuration (v11) is unnecessary; minSdkVersion is 21. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-v14: Warning: This folder configuration (v14) is unnecessary; minSdkVersion is 21. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Bluetooth.java:25: Warning: Do not place Android context classes in static fields (static reference to Bluetooth which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    static Bluetooth bluetooth;
+    ~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\file_item_bar.xml:2: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_DeviceList.java:62: Warning: This Handler class should be static or leaks might occur (anonymous android.os.Handler) [HandlerLeak]
+    Handler handler=new Handler(){
+                    ^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:173: Warning: This Handler class should be static or leaks might occur (anonymous android.os.Handler) [HandlerLeak]
+   handler = new Handler(){
+             ^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Wifi.java:51: Warning: This Handler class should be static or leaks might occur (anonymous android.os.Handler) [HandlerLeak]
+    Handler handler = new Handler(){
+                      ^
+
+   Explanation for issues of type "HandlerLeak":
+   Since this Handler is declared as an inner class, it may prevent the outer
+   class from being garbage collected. If the Handler is using a Looper or
+   MessageQueue for a thread other than the main thread, then there is no
+   issue. If the Handler is using the Looper or MessageQueue of the main
+   thread, you need to fix your Handler declaration, as follows: Declare the
+   Handler as a static class; In the outer class, instantiate a WeakReference
+   to the outer class and pass this object to your Handler when you
+   instantiate the Handler; Make all references to members of the outer class
+   using the WeakReference object.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:15: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:109: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+            <LinearLayout
+             ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:112: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_esc_function.xml:8: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+ <LinearLayout 
+  ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:7: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:7: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:77: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:7: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:7: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:7: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:99: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+      <LinearLayout 
+       ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:146: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+      <LinearLayout 
+       ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:117: Warning: Use a layout_width of 0dp instead of 10dp for better performance [InefficientWeight]
+                    android:layout_width="10dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:14: Warning: Use a layout_height of 0dp instead of match_parent for better performance [InefficientWeight]
+            android:layout_height="match_parent"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InefficientWeight":
+   When only a single widget in a LinearLayout defines a weight, it is more
+   efficient to assign a width/height of 0dp to it since it will absorb all
+   the remaining space anyway. With a declared width/height of 0dp it does not
+   have to measure its own size first.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:6: Warning: Possible overdraw: Root element paints background #ffffff with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+ android:background="#ffffff"
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_prn_file.xml:4: Warning: Possible overdraw: Root element paints background #ffffff with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+ android:background="#ffffff"
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_cashdrawer.xml:2: Warning: The resource R.layout.activity_cashdrawer appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_cut.xml:2: Warning: The resource R.layout.activity_cut appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_manage.xml:2: Warning: The resource R.layout.activity_image_manage appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:2: Warning: The resource R.layout.activity_page_mode appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:2: Warning: The resource R.layout.activity_pdf417 appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code128.gif: Warning: The resource R.drawable.code128 appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code93.gif: Warning: The resource R.drawable.code93 appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.colorPrimaryDark appears to be unused [UnusedResources]
+    <color name="colorPrimaryDark">#3700B3</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.colorAccent appears to be unused [UnusedResources]
+    <color name="colorAccent">#03DAC5</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\dimens.xml:4: Warning: The resource R.dimen.activity_horizontal_margin appears to be unused [UnusedResources]
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\dimens.xml:5: Warning: The resource R.dimen.activity_vertical_margin appears to be unused [UnusedResources]
+    <dimen name="activity_vertical_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\ic_menu.png: Warning: The resource R.drawable.ic_menu appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_printlist.xml:2: Warning: The resource R.layout.item_printlist appears to be unused [UnusedResources]
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\itf.gif: Warning: The resource R.drawable.itf appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\menu\main.xml:1: Warning: The resource R.menu.main appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\menu\menu.xml:2: Warning: The resource R.menu.menu appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\pdf417.gif: Warning: The resource R.drawable.pdf417 appears to be unused [UnusedResources]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.action_settings appears to be unused [UnusedResources]
+    <string name="action_settings">Settings</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.logo_show_time appears to be unused [UnusedResources]
+    <string name="logo_show_time">1500</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.activity_global_warning appears to be unused [UnusedResources]
+    <string name="activity_global_warning">Warning</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:13: Warning: The resource R.string.activity_global_yes appears to be unused [UnusedResources]
+    <string name="activity_global_yes">Yes</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.activity_global_cmd_send appears to be unused [UnusedResources]
+    <string name="activity_global_cmd_send">Printer code is sended.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.activity_main_scan_error appears to be unused [UnusedResources]
+    <string name="activity_main_scan_error">Scan Error!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.activity_main_scan_success appears to be unused [UnusedResources]
+    <string name="activity_main_scan_success">Scan Success!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.activity_main_connect_usb_printer appears to be unused [UnusedResources]
+    <string name="activity_main_connect_usb_printer">Please connect usb printer.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.activity_main_originalsize appears to be unused [UnusedResources]
+    <string name="activity_main_originalsize">OriginalSize:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:41: Warning: The resource R.string.activity_main_minifront appears to be unused [UnusedResources]
+    <string name="activity_main_minifront">MiniFront:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:42: Warning: The resource R.string.activity_main_heightsize appears to be unused [UnusedResources]
+    <string name="activity_main_heightsize">HeightSize:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:43: Warning: The resource R.string.activity_main_widthsize appears to be unused [UnusedResources]
+    <string name="activity_main_widthsize">WidthSize:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.activity_main_heightwidthsize appears to be unused [UnusedResources]
+    <string name="activity_main_heightwidthsize">HeightWidthSize:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.activity_main_bold appears to be unused [UnusedResources]
+    <string name="activity_main_bold">Blod:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.activity_main_underline appears to be unused [UnusedResources]
+    <string name="activity_main_underline">Underline:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:72: Warning: The resource R.array.activity_main_sample_3inch_receipt appears to be unused [UnusedResources]
+    <string-array name="activity_main_sample_3inch_receipt">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:108: Warning: The resource R.string.activity_esc_function_btnpagemode appears to be unused [UnusedResources]
+    <string name="activity_esc_function_btnpagemode">Page Mode</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:149: Warning: The resource R.string.activity_devicelist_bond_error appears to be unused [UnusedResources]
+    <string name="activity_devicelist_bond_error">"Bond error!Please bond bluetooth printer in settings panel first."</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:166: Warning: The resource R.string.activity_status_error appears to be unused [UnusedResources]
+    <string name="activity_status_error">Get printer status error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:167: Warning: The resource R.string.activity_status_transmit_status_no_paper appears to be unused [UnusedResources]
+    <string name="activity_status_transmit_status_no_paper">No paper.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:168: Warning: The resource R.string.activity_status_transmit_status_has_paper appears to be unused [UnusedResources]
+    <string name="activity_status_transmit_status_has_paper">Has paper.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:169: Warning: The resource R.string.activity_status_real_time_status_paper_near_end appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_paper_near_end">Paper is near end.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:170: Warning: The resource R.string.activity_status_real_time_status_paper_adquate appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_paper_adquate">Adquate paper.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:171: Warning: The resource R.string.activity_status_real_time_status_cover_is_open appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_cover_is_open">Cover is open.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:172: Warning: The resource R.string.activity_status_real_time_status_pressed_feed_button appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_pressed_feed_button">Pressed Feed Button.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:173: Warning: The resource R.string.activity_status_real_time_status_stopped_no_paper appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_stopped_no_paper">Stopped because no paper.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:174: Warning: The resource R.string.activity_status_real_time_status_has_error appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_has_error">Printer has error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:175: Warning: The resource R.string.activity_status_real_time_status_cutter_error appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_cutter_error">Cutter error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:176: Warning: The resource R.string.activity_status_real_time_status_unrecoverable_error appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_unrecoverable_error">Unrecoverable error occurred.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:177: Warning: The resource R.string.activity_status_real_time_status_auto_recoverable_error appears to be unused [UnusedResources]
+    <string name="activity_status_real_time_status_auto_recoverable_error">Automatically recoverable error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:189: Warning: The resource R.string.activity_1dbarcodes_data_error appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_data_error">import barcode data error！</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:190: Warning: The resource R.string.activity_1dbarcodes_UPC_A appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_UPC_A">075678164125</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:191: Warning: The resource R.string.activity_1dbarcodes_UPC_E appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_UPC_E">01227000009</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:192: Warning: The resource R.string.activity_1dbarcodes_JAN13 appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_JAN13">6901028075831</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:193: Warning: The resource R.string.activity_1dbarcodes_JAN8 appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_JAN8">04210009</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:194: Warning: The resource R.string.activity_1dbarcodes_ITF appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_ITF">123456789012</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:195: Warning: The resource R.string.activity_1dbarcodes_CODABAR appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_CODABAR">A40156B</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:196: Warning: The resource R.string.activity_1dbarcodes_CODE93 appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_CODE93">TEST93</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:197: Warning: The resource R.string.activity_1dbarcodes_CODE39 appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_CODE39">123456789</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:198: Warning: The resource R.string.activity_1dbarcodes_CODE128 appears to be unused [UnusedResources]
+    <string name="activity_1dbarcodes_CODE128">{BS/N:{C\014\042\070\116A</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:231: Warning: The resource R.string.activity_pdf417_dataColumns appears to be unused [UnusedResources]
+    <string name="activity_pdf417_dataColumns">dataColumns:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:232: Warning: The resource R.string.activity_pdf417_dataRows appears to be unused [UnusedResources]
+    <string name="activity_pdf417_dataRows">dataRows:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:233: Warning: The resource R.string.activity_pdf417_moduleWidth appears to be unused [UnusedResources]
+    <string name="activity_pdf417_moduleWidth">moduleWidth:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:234: Warning: The resource R.string.activity_pdf417_rowHeight appears to be unused [UnusedResources]
+    <string name="activity_pdf417_rowHeight">rowHeight:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:235: Warning: The resource R.string.activity_pdf417_errorMode appears to be unused [UnusedResources]
+    <string name="activity_pdf417_errorMode">errorMode:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:236: Warning: The resource R.string.activity_pdf417_errorLevel appears to be unused [UnusedResources]
+    <string name="activity_pdf417_errorLevel">errorLevel:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:237: Warning: The resource R.string.activity_pdf417_options appears to be unused [UnusedResources]
+    <string name="activity_pdf417_options">options:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:238: Warning: The resource R.string.activity_pdf417_standardMode appears to be unused [UnusedResources]
+    <string name="activity_pdf417_standardMode">standardMode:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:239: Warning: The resource R.string.activity_pdf417_compressionMode appears to be unused [UnusedResources]
+    <string name="activity_pdf417_compressionMode">compressionMode:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:240: Warning: The resource R.string.activity_pdf417_hierarchicalMode appears to be unused [UnusedResources]
+    <string name="activity_pdf417_hierarchicalMode">levelMode:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:241: Warning: The resource R.string.activity_pdf417_RatioMode appears to be unused [UnusedResources]
+    <string name="activity_pdf417_RatioMode">RatioMode:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:242: Warning: The resource R.string.activity_pdf417_no_data appears to be unused [UnusedResources]
+    <string name="activity_pdf417_no_data">Please import PDF417 data!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:243: Warning: The resource R.string.activity_pdf417_no_dataColumns appears to be unused [UnusedResources]
+    <string name="activity_pdf417_no_dataColumns">Please import PDF417 Columns!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:244: Warning: The resource R.string.activity_pdf417_no_dataRows appears to be unused [UnusedResources]
+    <string name="activity_pdf417_no_dataRows">Please import PDF417 Rows!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:249: Warning: The resource R.string.activity_qrcode_level appears to be unused [UnusedResources]
+    <string name="activity_qrcode_level">Correction Level:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:252: Warning: The resource R.string.activity_cut_fullcut appears to be unused [UnusedResources]
+    <string name="activity_cut_fullcut">Full Cut</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:253: Warning: The resource R.string.activity_cut_partialcut appears to be unused [UnusedResources]
+    <string name="activity_cut_partialcut">Partial Cut</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:254: Warning: The resource R.string.activity_cut_fullcutwithfeed appears to be unused [UnusedResources]
+    <string name="activity_cut_fullcutwithfeed">Full Cut With Feed</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:255: Warning: The resource R.string.activity_cut_partialcutwithfeed appears to be unused [UnusedResources]
+    <string name="activity_cut_partialcutwithfeed">Partial Cut With Feed</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:259: Warning: The resource R.string.activity_text_format_chkunderline appears to be unused [UnusedResources]
+    <string name="activity_text_format_chkunderline">Underline</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:261: Warning: The resource R.string.activity_text_format_chkminifont appears to be unused [UnusedResources]
+    <string name="activity_text_format_chkminifont">Mini Font</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:263: Warning: The resource R.string.activity_text_format_heighmultiple appears to be unused [UnusedResources]
+    <string name="activity_text_format_heighmultiple">Heigh Multiple</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:264: Warning: The resource R.string.activity_text_format_widthmultiple appears to be unused [UnusedResources]
+    <string name="activity_text_format_widthmultiple">Width Multiple</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:265: Warning: The resource R.string.activity_text_format_leftmargin appears to be unused [UnusedResources]
+    <string name="activity_text_format_leftmargin">Left Margin(Max 255):</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:268: Warning: The resource R.string.activity_text_format_x_multiplication appears to be unused [UnusedResources]
+    <string name="activity_text_format_x_multiplication">size:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:269: Warning: The resource R.string.activity_text_format_y_multiplication appears to be unused [UnusedResources]
+    <string name="activity_text_format_y_multiplication">y-multiplication:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:270: Warning: The resource R.string.activity_text_format_papeheight appears to be unused [UnusedResources]
+    <string name="activity_text_format_papeheight">Label length:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:271: Warning: The resource R.string.activity_text_format_unit appears to be unused [UnusedResources]
+    <string name="activity_text_format_unit">Unit:mm</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:272: Warning: The resource R.string.activity_text_format_no_pape appears to be unused [UnusedResources]
+    <string name="activity_text_format_no_pape">Please enter the correct label length</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:275: Warning: The resource R.array.activity_text_format_multiple appears to be unused [UnusedResources]
+    <string-array name="activity_text_format_multiple">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:286: Warning: The resource R.string.activity_cashdrawer_open1 appears to be unused [UnusedResources]
+    <string name="activity_cashdrawer_open1">Open #1 Cashdrawer</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:287: Warning: The resource R.string.activity_cashdrawer_open2 appears to be unused [UnusedResources]
+    <string name="activity_cashdrawer_open2">Open #2 Cashdrawer</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:288: Warning: The resource R.string.activity_cashdrawer_open12 appears to be unused [UnusedResources]
+    <string name="activity_cashdrawer_open12">Open #1 #2 Cashdrawer</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:293: Warning: The resource R.string.activity_page_mode_left_margin appears to be unused [UnusedResources]
+    <string name="activity_page_mode_left_margin">Left Margin(0≤n≤*)</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:294: Warning: The resource R.string.activity_page_mode_top_margin appears to be unused [UnusedResources]
+    <string name="activity_page_mode_top_margin">Top Margin(0≤n≤*)</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:295: Warning: The resource R.string.activity_page_mode_width appears to be unused [UnusedResources]
+    <string name="activity_page_mode_width">Width(1≤n≤*)</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:296: Warning: The resource R.string.activity_page_mode_height appears to be unused [UnusedResources]
+    <string name="activity_page_mode_height">Height(1≤n≤*)</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:297: Warning: The resource R.string.activity_page_mode_hposition appears to be unused [UnusedResources]
+    <string name="activity_page_mode_hposition">H Position</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:298: Warning: The resource R.string.activity_page_mode_vposition appears to be unused [UnusedResources]
+    <string name="activity_page_mode_vposition">V Position</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:300: Warning: The resource R.string.activity_page_mode_invalid_parameter appears to be unused [UnusedResources]
+    <string name="activity_page_mode_invalid_parameter">Invalid Parameter!</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:301: Warning: The resource R.array.activity_page_mode_print_direction_list appears to be unused [UnusedResources]
+    <string-array name="activity_page_mode_print_direction_list">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:308: Warning: The resource R.string.activity_image_manage_imageno appears to be unused [UnusedResources]
+    <string name="activity_image_manage_imageno">Image No：</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:309: Warning: The resource R.string.activity_image_manage_btnprint appears to be unused [UnusedResources]
+    <string name="activity_image_manage_btnprint">Print Image</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:310: Warning: The resource R.string.activity_image_manage_btndownload appears to be unused [UnusedResources]
+    <string name="activity_image_manage_btndownload">Download Image</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:311: Warning: The resource R.string.activity_image_manage_btndeleteone appears to be unused [UnusedResources]
+    <string name="activity_image_manage_btndeleteone">Delete Image</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:312: Warning: The resource R.string.activity_image_manage_btndeleteall appears to be unused [UnusedResources]
+    <string name="activity_image_manage_btndeleteall">Delete All Image</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:313: Warning: The resource R.string.activity_image_manage_btnrefresh appears to be unused [UnusedResources]
+    <string name="activity_image_manage_btnrefresh">Refresh</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:314: Warning: The resource R.string.activity_image_manage_txtSpace appears to be unused [UnusedResources]
+    <string name="activity_image_manage_txtSpace">Total size:NK,Free size:MK</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:315: Warning: The resource R.string.activity_image_manage_txtCounter appears to be unused [UnusedResources]
+    <string name="activity_image_manage_txtCounter">Image count:N</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:316: Warning: The resource R.string.activity_image_manage_delete_one appears to be unused [UnusedResources]
+    <string name="activity_image_manage_delete_one">Sure delete this image?</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:317: Warning: The resource R.string.activity_image_manage_delete_all appears to be unused [UnusedResources]
+    <string name="activity_image_manage_delete_all">Sure delete all image?</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:318: Warning: The resource R.string.activity_image_manage_print_image_error appears to be unused [UnusedResources]
+    <string name="activity_image_manage_print_image_error">Print image error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:319: Warning: The resource R.string.activity_image_manage_define_NV_image_success appears to be unused [UnusedResources]
+    <string name="activity_image_manage_define_NV_image_success">Download NV image success.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:320: Warning: The resource R.string.activity_image_manage_define_NV_image_error appears to be unused [UnusedResources]
+    <string name="activity_image_manage_define_NV_image_error">Download NV image error.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:321: Warning: The resource R.string.activity_image_manage_download_first appears to be unused [UnusedResources]
+    <string name="activity_image_manage_download_first">Please download NV image first.</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:331: Warning: The resource R.string.activity_auto_text appears to be unused [UnusedResources]
+    <string name="activity_auto_text">Auto Text Print</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:337: Warning: The resource R.string.activity_main_light appears to be unused [UnusedResources]
+    <string name="activity_main_light">Light</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:394: Warning: The resource R.string.sdk_type appears to be unused [UnusedResources]
+    <string name="sdk_type">all</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:395: Warning: The resource R.array.printer_list_all appears to be unused [UnusedResources]
+    <string-array name="printer_list_all">
+                  ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:454: Warning: The resource R.array.printer_list_hprt appears to be unused [UnusedResources]
+    <string-array name="printer_list_hprt">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:483: Warning: The resource R.array.printer_list_mkt appears to be unused [UnusedResources]
+    <string-array name="printer_list_mkt">
+                  ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:499: Warning: The resource R.array.printer_list_mprint appears to be unused [UnusedResources]
+    <string-array name="printer_list_mprint">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:505: Warning: The resource R.array.printer_list_sycrown appears to be unused [UnusedResources]
+    <string-array name="printer_list_sycrown">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:511: Warning: The resource R.array.printer_list_mgpos appears to be unused [UnusedResources]
+    <string-array name="printer_list_mgpos">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:516: Warning: The resource R.array.printer_list_ds appears to be unused [UnusedResources]
+    <string-array name="printer_list_ds">
+                  ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:520: Warning: The resource R.array.printer_list_cst appears to be unused [UnusedResources]
+    <string-array name="printer_list_cst">
+                  ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:524: Warning: The resource R.array.printer_list_other appears to be unused [UnusedResources]
+    <string-array name="printer_list_other">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:527: Warning: The resource R.array.printer_list_tspl appears to be unused [UnusedResources]
+    <string-array name="printer_list_tspl">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:536: Warning: The resource R.array.printer_list_cpcl appears to be unused [UnusedResources]
+    <string-array name="printer_list_cpcl">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\styles.xml:19: Warning: The resource R.style.my_edittext_style appears to be unused [UnusedResources]
+    <style name="my_edittext_style" parent="@android:style/Widget.EditText">
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:20: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:8: Warning: This ScrollView layout or its RelativeLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+    <ScrollView
+     ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:115: Warning: This LinearLayout layout or its LinearLayout parent is possibly unnecessary [UselessParent]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:8: Warning: This ScrollView layout or its LinearLayout parent is unnecessary; transfer the background attribute to the other view [UselessParent]
+        <ScrollView
+         ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_esc_function.xml:8: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+ <LinearLayout 
+  ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_esc_function.xml:13: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:12: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:12: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_print_image.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:12: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_setting.xml:12: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:7: Warning: This LinearLayout layout or its LinearLayout parent is unnecessary [UselessParent]
+    <LinearLayout 
+     ~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:12: Warning: This ScrollView layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+     <ScrollView 
+      ~~~~~~~~~~
+
+   Explanation for issues of type "UselessParent":
+   A layout with children that has no siblings, is not a scrollview or a root
+   layout, and does not have a background, can be removed and have its
+   children moved directly into the parent for a flatter and more efficient
+   layout hierarchy.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:55: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"TEL +86-(0)592-5885991\n"</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:56: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"日期：2013-08-20"</item>
+              ~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:57: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"         2013-08-20\n"</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:72: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"时间：2013-08-20 09:30:50"</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:79: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+  <item>"日期：2013-08-20\n"</item>
+        ~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:79: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"TEL +86-(0)592-5885991\n"</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:81: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>"                 2013-08-20\n"</item>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:95: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+  <item>"时间：2013-08-20 09:30:50\n"</item>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:96: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+  <item>"电话：0592- 5935252\n"</item>
+        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:199: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="activity_1dbarcodes_HELP">code128 can print Numbers and letters\nUPC-A、UPC-E can print Number，The number of bits 11-12\nEAN can print Number，The number of bits 12-13\ncode39和code93 can print Number\nCodabar starts and ends with A, B, C, and D, with only 5 digits in between</string>
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:379: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-1</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:380: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-2</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:381: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-3</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:382: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-4</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:383: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-5</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:384: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-6</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:385: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-8</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:386: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-1</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:386: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-9</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:387: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-2</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:387: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-15</item>
+              ~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:388: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-3</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:389: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-4</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:390: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-5</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:391: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-6</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:392: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-8</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:393: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-9</item>
+              ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:394: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+        <item>ISO8859-15</item>
+              ~~~~~~~~~~
+
+   Explanation for issues of type "TypographyDashes":
+   The "n dash" (u2013, &#8211;) and the "m dash" (u2014, &#8212;) characters
+   are used for ranges (n dash) and breaks (m dash). Using these instead of
+   plain hyphens can make text easier to read and your application will look
+   more polished.
+
+   https://en.wikipedia.org/wiki/Dash
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values\strings.xml:324: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="activity_downloadnv_btnselectimage">Select Image...</string>
+                                                      ~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\values-zh-rCN\strings.xml:332: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="activity_downloadnv_btnselectimage">选择图片...</string>
+                                                      ~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code128.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code39.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code93.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\itf.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\pdf417.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\qrcode.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+
+   Explanation for issues of type "GifUsage":
+   The .gif file format is discouraged. Consider using .png (preferred) or
+   .jpg (acceptable) instead.
+
+   https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code128.gif: Warning: Found bitmap drawable res/drawable/code128.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code39.gif: Warning: Found bitmap drawable res/drawable/code39.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\code93.gif: Warning: Found bitmap drawable res/drawable/code93.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\ic_menu.png: Warning: Found bitmap drawable res/drawable/ic_menu.png in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\icon_file_image.png: Warning: Found bitmap drawable res/drawable/icon_file_image.png in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\icon_folder.png: Warning: Found bitmap drawable res/drawable/icon_folder.png in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\icon_prn.png: Warning: Found bitmap drawable res/drawable/icon_prn.png in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\itf.gif: Warning: Found bitmap drawable res/drawable/itf.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\logo2.png: Warning: Found bitmap drawable res/drawable/logo2.png in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\pdf417.gif: Warning: Found bitmap drawable res/drawable/pdf417.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\qrcode.gif: Warning: Found bitmap drawable res/drawable/qrcode.gif in densityless folder [IconLocation]
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\drawable\selectimage.png: Warning: Found bitmap drawable res/drawable/selectimage.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:66: Warning: Cancel button should be on the left (was "Connect | Cancel", should be "Cancel | Connect") [ButtonOrder]
+     <Button android:id="@+id/btncancel"
+      ~~~~~~
+
+   Explanation for issues of type "ButtonOrder":
+   According to the Android Design Guide,
+
+   "Action buttons are typically Cancel and/or OK, with OK indicating the
+   preferred or most likely action. However, if the options consist of
+   specific actions such as Close or Wait rather than a confirmation or
+   cancellation of the action described in the content, then all the buttons
+   should be active verbs. As a rule, the dismissive action of a dialog is
+   always on the left whereas the affirmative actions are on the right."
+
+   This check looks for button bars and buttons which look like cancel
+   buttons, and makes sure that these are on the left.
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:42: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:55: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:67: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:115: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:127: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_print_image.xml:12: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button android:id="@+id/btnPhoto"
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_print_image.xml:19: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button android:id="@+id/btnGallery"
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:59: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button android:id="@+id/btnconnect"
+      ~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:66: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+     <Button android:id="@+id/btncancel"
+      ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:66: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:84: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:93: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:109: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:53: Warning: This text field does not specify an inputType [TextFields]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:62: Warning: This text field does not specify an inputType [TextFields]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:82: Warning: This text field does not specify an inputType [TextFields]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:91: Warning: This text field does not specify an inputType [TextFields]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:25: Warning: This text field does not specify an inputType [TextFields]
+     <EditText
+      ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:49: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:71: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:93: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:115: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:137: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:159: Warning: This text field does not specify an inputType [TextFields]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:60: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:69: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:59: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:68: Warning: This text field does not specify an inputType [TextFields]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:21: Warning: This text field does not specify an inputType [TextFields]
+  <EditText
+   ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:42: Warning: This text field does not specify an inputType [TextFields]
+  <EditText
+   ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:66: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:84: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:93: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:109: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:23: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:45: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:56: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:77: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:87: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:143: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:21: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:53: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:62: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:82: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:91: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:25: Warning: Missing autofillHints attribute [Autofill]
+     <EditText
+      ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:27: Warning: Missing autofillHints attribute [Autofill]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:49: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:71: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:93: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:115: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:137: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:159: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:33: Warning: Missing autofillHints attribute [Autofill]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:48: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:66: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:41: Warning: Missing autofillHints attribute [Autofill]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:60: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:69: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:26: Warning: Missing autofillHints attribute [Autofill]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:59: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:68: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:21: Warning: Missing autofillHints attribute [Autofill]
+  <EditText
+   ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:42: Warning: Missing autofillHints attribute [Autofill]
+  <EditText
+   ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:201: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\AndroidManifest.xml:25: Warning: Consider whether this feature (android.hardware.camera.autofocus) really is required for the app to function; you can set android:required="false" to indicate that the feature is used but not required [UnnecessaryRequiredFeature]
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnnecessaryRequiredFeature":
+   Avoid unnecessarily requiring features that may exclude your app from being
+   served onto devices it might otherwise support.
+
+   Consider whether your application can function adequately without
+   restrictive feature requirements by setting these to
+   android:required="false". By doing so, you can increase the availability of
+   your app to a broader set of devices, including tablets, laptops and cars.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:7: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:7: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_logo.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:27: Warning: Missing contentDescription attribute on image [ContentDescription]
+       <ImageView
+        ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\file_item_bar.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+ <ImageView
+  ~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:5: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:66: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:84: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:93: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:109: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:23: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+            <EditText
+             ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:45: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:56: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:77: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:87: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:21: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:53: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:62: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:82: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:91: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                    <EditText
+                     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:25: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+     <EditText
+      ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:27: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:49: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:71: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:93: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:115: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:137: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:159: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:33: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:41: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:60: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:69: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:26: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+       <EditText
+        ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:59: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:68: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+    <EditText
+     ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:21: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+  <EditText
+   ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_wifi.xml:42: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+  <EditText
+   ~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:201: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+        <EditText
+         ~~~~~~~~
+
+   Explanation for issues of type "LabelFor":
+   Editable text fields should provide an android:hint or, provided your
+   minSdkVersion is at least 17, they may be referenced by a view with a
+   android:labelFor attribute.
+
+   When using android:labelFor, be sure to provide an android:text or an
+   android:contentDescription.
+
+   If your view is labeled but by a label in a different layout which includes
+   this one, just suppress this warning from lint.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_1DBarcodes.java:187: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    txtBarcode_y.setText("500");
+                         ~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:211: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+   btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+arrpaper[1]);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:213: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+   btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+arrpaper[0]);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:309: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        txtTips.setText(thisCon.getString(R.string.activity_main_connecterr)+result);
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:499: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        txtTips.setText(thisCon.getString(R.string.activity_main_connecterr)+i);
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:503: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        txtTips.setText("Name:"+device.getProductName());
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:503: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        txtTips.setText("Name:"+device.getProductName());
+                        ~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:936: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+   btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:946: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:956: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:966: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:976: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:986: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:996: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1006: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1016: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1026: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Main.java:1036: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+     btnOpenCashDrawer.setText(getResources().getString(R.string.activity_esc_function_btnopencashdrawer)+":"+papertype[which]);
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_QRCode.java:93: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    txtqrcode_y.setText("500");
+                        ~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_TextFormat.java:99: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    txtformat_x.setText("100");
+                        ~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\java\com\sdk\cpcl\Activity_Wifi.java:88: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                                    txtTips.setText(thisCon.getString(R.string.activity_main_connecterr)+i);
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:72: Warning: Hardcoded string "123456789", should use @string resource [HardcodedText]
+           android:text="123456789"
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:91: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:100: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_1dbarcodes.xml:115: Warning: Hardcoded string "80", should use @string resource [HardcodedText]
+           android:text="80"
+           ~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:33: Warning: Hardcoded string "A508", should use @string resource [HardcodedText]
+                android:text="A508" />
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:52: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                    android:text="0"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:63: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                    android:text="0"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:84: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+                    android:text="1"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:94: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+                    android:text="1"
+                    ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:149: Warning: Hardcoded string "0-255", should use @string resource [HardcodedText]
+                        android:hint="0-255"
+                        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:60: Warning: Hardcoded string "300", should use @string resource [HardcodedText]
+                        android:text="300"
+                        ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:69: Warning: Hardcoded string "300", should use @string resource [HardcodedText]
+                        android:text="300"
+                        ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:89: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                        android:text="0"
+                        ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_auto_text.xml:98: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                        android:text="0"
+                        ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_esc_function.xml:214: Warning: Hardcoded string "称重", should use @string resource [HardcodedText]
+     android:text="称重" />
+     ~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:57: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+            android:text="0"   
+            ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:79: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+            android:text="0"   
+            ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:101: Warning: Hardcoded string "200", should use @string resource [HardcodedText]
+            android:text="200"   
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:123: Warning: Hardcoded string "200", should use @string resource [HardcodedText]
+            android:text="200"   
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:145: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+            android:text="0"   
+            ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_page_mode.xml:167: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+            android:text="0"   
+            ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:55: Warning: Hardcoded string "0 ≤ n ≤ 30", should use @string resource [HardcodedText]
+           android:hint="0 ≤ n ≤ 30"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_pdf417.xml:73: Warning: Hardcoded string "3 ≤ n ≤ 90", should use @string resource [HardcodedText]
+           android:hint="3 ≤ n ≤ 90"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:67: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_qrcode.xml:76: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:66: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_text_format.xml:75: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+           android:text="0"
+           ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:36: Warning: Hardcoded string "576", should use @string resource [HardcodedText]
+                android:text="576"/>
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:44: Warning: Hardcoded string "384", should use @string resource [HardcodedText]
+                android:text="384"/>
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:52: Warning: Hardcoded string "832", should use @string resource [HardcodedText]
+                android:text="832"/>
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:133: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                android:text="0"/>
+                ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:141: Warning: Hardcoded string "90", should use @string resource [HardcodedText]
+                android:text="90"/>
+                ~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:205: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+            android:text="1"
+            ~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\menu\menu.xml:7: Warning: Hardcoded string "版本信息", should use @string resource [HardcodedText]
+        android:title="版本信息"/>
+        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_devicelist.xml:18: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+        android:paddingLeft="5dp"/>
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_devicelist.xml:34: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+        android:paddingLeft="5dp"/>
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity__text_background.xml:141: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="10dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_devicelist.xml:18: Warning: Consider replacing android:paddingLeft with android:paddingStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="5dp"/>
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_devicelist.xml:34: Warning: Consider replacing android:paddingLeft with android:paddingStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="5dp"/>
+        ~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_image_download.xml:30: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="2.0dip" to better support right-to-left layouts [RtlHardcoded]
+         android:layout_marginRight="2.0dip"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:21: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="8dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:30: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginRight="5dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:62: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginRight="5dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\activity_main.xml:104: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginRight="5dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\file_item_bar.xml:13: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="10dp"/>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\file_item_bar.xml:17: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="7dp" to better support right-to-left layouts [RtlHardcoded]
+  android:layout_marginLeft="7dp"
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:15: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:42: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="4dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="4dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:50: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="4dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="4dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:58: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="4dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="4dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:67: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:94: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="8dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:102: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="8dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:110: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:139: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="8dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:148: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:174: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="8dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:182: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="8dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\isa\Desktop\Mobile Receipt Printer\AndroidCPCLDemo\app\src\main\res\layout\item_print.xml:199: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="16dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+0 errors, 526 warnings
